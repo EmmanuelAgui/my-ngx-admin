@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-header>
+    Smart Table
+  </nb-card-header>
+
+  <nb-card-body>
+    <button (click)="deleteSelected(tableRef)" >删除</button>
+    <ng2-smart-table #tableRef [settings]="settings" [source]="source" (rowSelect)="onSelect($event)" (edit)="onEdit($event)" (create)="newOne($event)" (delete)="deleteOne($event)" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
